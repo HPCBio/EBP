@@ -3,7 +3,9 @@
 The software and documentation files are provided by the vendor.
 https://www.universalsequencing.com/analysis-tools
 
-You should receive these files 
+You should receive these files from the download link that the vendors provide.
+
+Download them locally to your laptop.
 
 <pre>
 TELL Seq Software User Guide (Tell-Link) (1).pdf  
@@ -17,17 +19,24 @@ tellsort-v1.0.2.tar
 
 # Dependencies
 
-The software tools are provided as docker containers.
+The actual analysis tools are provided as docker containers. Therefore, there are no pre-requisites. 
 
-Make you you can download and install docker container using Docker or Singularity
+Make sure you can install and execute docker container using Docker or Singularity
+
+In our case, we need Singularity already installed and configured on the cluster
+
+- singularity version 3.4.1
+
 
 # Installation 
 
-## Untar files
+This step should be straightforward as containers are by definition "out-of-the-box" toolkits.
 
-The path to the installation folder depends on local configuration for Docker or for Singularity
+However, the path to the installation folder is determined by how Docker or Singularity was setup on the cluster.
 
 These were the steps for installing the software so that it could work with Singularity on the biotech server
+
+## Untar vendor files
 
 <pre>
 
@@ -58,6 +67,7 @@ $ tar -xvf tellink-v1.0.2.tar
 tellink-release/
 tellink-release/docker-tellink
 tellink-release/run_tellink.sh
+
 </pre>
 
 ## Install containers with Singularity
@@ -162,7 +172,14 @@ Storing signatures
 INFO:    Creating SIF file...
 INFO:    Build complete: tellink.simg
 
+</pre>
 
+## The folder structure
+
+After installing the tools using Singularity, the folder should look like this:
+
+
+<pre>
 
 $ cd /home/a-m/grendon/TELL-Seq/v1.0.2/
 

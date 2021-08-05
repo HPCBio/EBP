@@ -39,11 +39,11 @@ Lane,Sample_ID,Sample_Name,index,index2,Sample_Project,User_Name,Report_No,Appli
 
 </pre>
 
-## running the demultiplexing command
+## Demultiplexing
 
 The demultiplexing command has to be launched from /rundir/Data/Intensities/BaseCalls/
 
-the param --tiles s_3 is specified in the cmd to indicate that only lane 3 will be demultiplexed with this command
+The param --tiles s_3 is specified in the cmd to indicate that only lane 3 will be demultiplexed with this command
 
 <pre>
 
@@ -67,6 +67,7 @@ $ nohup bcl2fastq -R /rundir/  \
 # Outputs
 
 The output folder will have as many projects and samples as described in the sample sheet.
+
 For example; the samplesheet shown earlier would produce an output folder with this structure
 
 <pre>
