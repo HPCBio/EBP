@@ -95,6 +95,9 @@ $ tree
 Each sample will have a separate folder and should contain these FOUR files
 
 R1 has forward reads, readlen=150
+
 R3 has reverse reads, readlen=150
+
 R2 has 10x-like barcodes, readlen=18
+
 I1 has illumina indices, readlen=8. This file is not used during post-processing.
