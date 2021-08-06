@@ -2,6 +2,14 @@
 
 TellSeq libraries: https://www.universalsequencing.com/technology
 
+
+TellSeq libraries produce short reads.  These short reads were used in this project for two different purposes: 
+
+1. To estimate genome size using kmer distribution histograms of the short reads and then running GenomeScope 2.0
+
+2. To scaffold the assembly with short reads.  The scaffolding toolkit we used was ARCS-LINKS. See page: https://github.com/bcgsc/arcs
+
+
 # Dependencies
 
 This program expects the following tools/languages to be installed as modules and be available in your path:
