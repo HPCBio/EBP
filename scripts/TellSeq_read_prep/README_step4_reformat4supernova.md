@@ -57,7 +57,7 @@ cd /home/a-m/grendon/EB14_nobc/supernova_inputs
 -r2 ../Full/EB14_nobc_R2_T500.fastq.gz.corrected.fastq.err_barcode_removed.fastq \
 -wl /home/a-m/grendon/TELL-Seq/conversion_tool/4M-with-alts-february-2016.txt 
 
-<pre>
+</pre>
 
 Where:
 
@@ -65,16 +65,18 @@ Where:
 - -i1  is the file with barcodes
 - -r1  is the file with forward reads
 - -r2  is the file with reverse reads
--w1 is the filename of the database
+- -w1 is the filename of the database
 
 # Outputs
+
+Two files that have fixed filenames as shown below:
 
 <pre>
 
 $ ls
-
 R1_sl.fastq.gz.4tenx.fastq
 R2_sl.fastq.gz.4tenx.fastq
+
 </pre>
 
 
@@ -84,7 +86,7 @@ Supernova expects filenames to adhere to a certain pattern.
 It also expects the files to be compressed
 
 <pre>
- <sampleID>_S1_L001_R1_001.fastq.gz
+        <sampleID>_S1_L001_R1_001.fastq.gz
 </pre>
 
 Unfortunately the script does not perform these two tasks. You have to do them manually.
