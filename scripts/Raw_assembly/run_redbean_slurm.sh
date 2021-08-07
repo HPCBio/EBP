@@ -34,7 +34,7 @@ CLR1=/path/to/CLR_set1_subreads.fastq
 CLR2=/path/to/CLR_set1_subreads.fastq
 DEPTH=80x
 SIZE=2.5g
-OUTPUTDIR=/path/to/results/<date>_${PREFIX}_Redbean_${SIZE}_$DEPTH}
+OUTPUTDIR=/path/to/results/<date>_${PREFIX}_Redbean_${SIZE}_${DEPTH}
 SCRATCH=/scratch/$SLURM_JOB_NAME
 
 if [ ! -s "$CLR1" ]
@@ -77,7 +77,7 @@ module load wtdbg2/2.5-IGB-gcc-4.9.4
 wtdbg2 -x sq -g $SIZE -X $DEPTH -t $SLURM_NPROCS \
  -i $CLR1 \
  -i $CLR2 \
- -fo ${PREFIX}_Redbean_${SIZE}_$DEPTH
+ -fo ${PREFIX}_Redbean_${SIZE}_${DEPTH}
 
 echo `date`
 echo ################################ Step3: run wtpoa

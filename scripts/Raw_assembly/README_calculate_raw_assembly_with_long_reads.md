@@ -30,12 +30,12 @@ https://github.com/ruanjue/wtdbg2/blob/master/README-ori.md
 
 - slurm workload manager https://slurm.schedmd.com/documentation.html
 
-# Generate raw assembly using hifiasm and HiFi reads
+# 1. Generate raw assembly using hifiasm and HiFi reads
 
 We used hifiasm to generate raw assemblies with HiFi reads. https://github.com/chhylp123/hifiasm
 
 
-## The hifiasm script
+## 1.1 The hifiasm script
 
 The script hifiasm_slurm.sh runs hifiasm on a linux cluster. 
 
@@ -47,7 +47,7 @@ The script consists of two steps:
 
 - Step 2 runs gfatools gfa2fa to reformat the output and write it in fasta format.
 
-## Run the script
+## 1.2 Run the script
 
 <pre>
  sbatch hifiasm_slurm.sh
@@ -56,7 +56,7 @@ The script consists of two steps:
 The tool is very fast. It should not take more than 6 hours to run.
 
 
-## hifiasm output files
+## 1.3 hifiasm output files
 
 Hifiasm generates different types of assemblies based on the input data. 
 
@@ -66,7 +66,7 @@ For more details, please see the complete: https://hifiasm.readthedocs.io/en/lat
 
 
 
-# Generate raw assembly using redbean and CLR reads
+# 2. Generate raw assembly using redbean and CLR reads
 
 This tool requires some preprocessing steps.
 
@@ -77,7 +77,7 @@ This tool requires some preprocessing steps.
 - Estimate read coverage
 
 
-## Estimate genome size
+## 2.1 Estimate genome size
 
 See README_step6_run_GenomeScope.md  for full details
 
@@ -106,7 +106,7 @@ Read Error Rate               0.303731%         0.303731%
 
 The estimated genome size is 3.3Gbp
 
-## Calculate stats of CLR reads
+## 2.2 Calculate stats of CLR reads
 
 There are many tools that can do this job. We used seqkit stats
 
@@ -126,7 +126,7 @@ EB20_m64108_210118_121306.subreads.fastq 	28,535,669 	240,060,443,237 	50 	8,413
 
 </pre>
 
-## Filter CLR reads by read length 
+## 2.3 Filter CLR reads by read length 
 
 Denovo assembly tools select the longest reads as *anchors".
 
@@ -150,7 +150,7 @@ $ seqkit seq -w 0 -m 5000 -M 60000 EB20_m64108_210118_121306.subreads.fastq  > E
 
 </pre>
 
-Check read lengths again
+## 2.4 Check read lengths again
 
 <pre>
 
@@ -166,7 +166,7 @@ EB20_m64108_210118_121306.subreads_min5kb_max60kb.fastq    FASTQ    DNA    13251
 
 </pre>
 
-## Calculate read depth
+## 2.5 Calculate read depth
 
 The estimated genome size is 3.3Gbp
 
@@ -176,7 +176,7 @@ And so on
 
 Do we have enough read coverage for each one of these levels? The answer is yes we do
 
-## Edit the script
+## 2.6 Edit the script
 
 The script run_redbean_slurm.sh runs the assembly tool on a cluster.
 
@@ -188,7 +188,7 @@ The script consists of two steps:
 
 - Step 2 runs wtpoa-cns to reformat the output and write it in fasta format.
 
-## Run the script
+## 2.7 Run the script
 
 <pre>
  sbatch run_redbean_slurm.sh
@@ -196,11 +196,11 @@ The script consists of two steps:
 
 This tool takes a very long time to execute.  It could take over a week or more to complete.
 
-## Output files
+## 2.8 Output files
 
 This link explains the output files of wtdbg2 : https://github.com/ruanjue/wtdbg2/blob/master/README-ori.md
 
-The rae assembly should be in the file ending in ctg.fa
+The raw assembly should be in the file ending in ctg.fa
 
 
 
