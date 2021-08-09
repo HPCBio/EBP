@@ -205,11 +205,10 @@ The raw assembly should be in the file ending in ctg.fa
 
 # QC the raw assembly
 
-We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl to calculate assembly stats.
+We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl to calculate assembly contiguity.
 
 It also runs BUSCO (database: insecta_odb10)  to calculate genome completeness.
 
-BUSCO documentations: https://busco.ezlab.org/busco_userguide.html
 
 
 

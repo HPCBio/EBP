@@ -80,7 +80,7 @@ We provide the script BUSCO_metrics_slurm.sh to assess assembly contiguity and c
 
 # 3. The script
 
-We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl and then BUSCO.
+We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl to calculate assembly stats.
 
 ## 3.1 Setup
 
@@ -91,8 +91,6 @@ Before running the script, you need to do the following steps
 - If the Augustus tool was installed in a path that is write-protected; then you need to copy the config.ini file to you home folder
 
 - If the BUSCO database is not found in the default path (BUSCO/data/lineages/insecta_odb10); then you need to specify the full path in the script
-
-- Copy the assemblathon folder (provided with this repo) to your home folder
 
 ## 3.2 Run the script
 
