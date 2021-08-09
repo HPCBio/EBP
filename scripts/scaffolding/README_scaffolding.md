@@ -20,7 +20,7 @@ Scaffolding is then performed with the LINKS scaffolder,
 a tool originally developed for scaffolding assemblies with the help of long-read data. 
 A similar approach is used by ARKS, a tool that relies on k-mer matches 
 instead of sequence alignment to infer the assignment of the linked reads to assembled contigs
-</pre>
+<pre>
 
 Sources:
 
@@ -71,11 +71,13 @@ https://www.biorxiv.org/content/10.1101/261149v2.full
 
 # 2. Dependencies
 
+- This step should be run after purging duplicates
+
 - ARCS 1.2.1 https://github.com/bcgsc/arcs
 
 - LINKS  1.8
 
-- makeTSVfile.py  a sript that is provided in this repo
+- makeTSVfile.py  a script that is provided in this repo
 
 - BEDTools 2.28.0
 
@@ -147,21 +149,6 @@ This script can take approx one hour.
 We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl to calculate assembly contiguity.
 
 It also runs BUSCO (database: insecta_odb10)  to calculate genome completeness.
-
-
-## 4.4 Optional - Juicebox
-
-We provide the script SALSA_Juicebox_hic_assembly_files.slurm.sh that generates files that can be uploaded to the Joicebox server
-in order to visualize contact maps
-
-Joucebox server: https://www.aidenlab.org/juicebox/
-
-White paper:
-
-Juicebox Provides a Visualization System for Hi-C Contact Maps with Unlimited Zoom
-Cell Syst. 2016 Jul; 3(1): 99–101.
-doi: 10.1016/j.cels.2015.07.012
-
 
 
 
