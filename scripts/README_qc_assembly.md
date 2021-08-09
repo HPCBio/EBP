@@ -80,7 +80,7 @@ We provide the script BUSCO_metrics_slurm.sh to assess assembly contiguity and c
 
 # 3. The script
 
-We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl to calculate assembly stats.
+We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl and then BUSCO.
 
 ## 3.1 Setup
 
