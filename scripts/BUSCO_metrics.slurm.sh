@@ -31,14 +31,14 @@ echo ################################ Declare variables and sanity check
 
 
 PREFIX=EBxx
-GENOME=/path/to/$PREFIX}_genome.fasta
+GENOME=/path/to/genome.fasta
 GENOMENAME=$(basename $GENOME)
 OUTPUTDIR=/path/to/outputdir
-BUSCODB=/home/apps/software/BUSCO/4.1.4-IGB-gcc-8.2.0-Python-3.7.2/data/lineages/insecta_odb10
-SCRIPT=/home/groups/earthbiogenome/src/assemblathon2-analysis/assemblathon_stats.pl
+BUSCODB=/path/to/BUSCO/data/lineages/insecta_odb10
+SCRIPT=src/assemblathon/assemblathon_stats.pl
 SCRIPTDIR=$(dirname $SCRIPT)
-CONFIGDIR=/home/groups/earthbiogenome/src/config/
-BUSCOCONFIG=/home/groups/earthbiogenome/src/config.ini
+CONFIGDIR=src/config/
+BUSCOCONFIG=src/config.ini
 BUSCOPREFIX=BUSCO_$GENOMENAME
 
 if [ ! -s "$GENOME" ]
