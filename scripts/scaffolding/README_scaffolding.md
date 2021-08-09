@@ -20,7 +20,7 @@ Scaffolding is then performed with the LINKS scaffolder,
 a tool originally developed for scaffolding assemblies with the help of long-read data. 
 A similar approach is used by ARKS, a tool that relies on k-mer matches 
 instead of sequence alignment to infer the assignment of the linked reads to assembled contigs
-<pre>
+</pre>
 
 Sources:
 
