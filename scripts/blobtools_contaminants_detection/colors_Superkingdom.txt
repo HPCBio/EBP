@@ -1,0 +1,7 @@
+Eukaryota,#e2514a
+no-hit,#d3d3d3
+undef,#660066
+unresolved,#b300b3
+Bacteria,#248f24
+Viruses,#b84dff
+unresolved,#6699ff
