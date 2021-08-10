@@ -76,6 +76,8 @@ We provide the script BUSCO_metrics_slurm.sh to assess assembly contiguity and c
 
 - Perl 5.28.1 or higher
 
+- assemblathon scripts provided with this repo
+
 - slurm workload manager https://slurm.schedmd.com/documentation.html
 
 # 3. The script
@@ -91,6 +93,8 @@ Before running the script, you need to do the following steps
 - If the Augustus tool was installed in a path that is write-protected; then you need to copy the config.ini file to you home folder
 
 - If the BUSCO database is not found in the default path (BUSCO/data/lineages/insecta_odb10); then you need to specify the full path in the script
+
+- Copy the assemblathon folder to your path
 
 ## 3.2 Run the script
 
