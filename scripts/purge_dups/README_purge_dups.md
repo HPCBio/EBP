@@ -7,6 +7,7 @@ See https://github.com/dfguan/purge_dups
 # 2. Dependencies
 
 - This step should be run after a raw assembly is generated with HiFi reads
+OR after the Arrow-polishing step of a genome generated with CLR reads 
 
 - purge_dups 1.2.5
 

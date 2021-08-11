@@ -5,11 +5,13 @@ Gap filling is an important finishing step in de novo genome assembly, especiall
 The gap filling problem is nontrivial and while there are many computational tools partially solving the problem, 
 several have shortcomings as to the reliability and correctness of the output, i.e. the gap filled draft genome.
 
-We performed two types of gap filling: 
+We performed these types of gap filling: 
 
 - Gap-filling  using RAILS-COBBLER when HiFi reads are available
 
 - Gap-filling  using SEALER when  Hi-C reads are available
+
+- Gap-filling using SEAER on a CLR assembly 
 
 We perform one type of genome masking:
 
@@ -42,6 +44,8 @@ https://github.com/bcgsc/RAILS
 
 ## 1.2 Gap-filling  using SEALER when  Hi-C reads are available
 
+We provide the script HiFi_SEALER.sh to be used with HiFi assemblies.
+
 <pre>
 Sealer is a scalable tool designed to close gaps within assembly scaffolds. 
 Sealer is a stand-alone application of Konnector, a fast and low-memory Bloom filter-based de bruijn graph assembler. 
@@ -54,11 +58,19 @@ Source:
 
 https://www.bcgsc.ca/resources/software/sealer
 
-## 1.3 Order of gap-filling
+## 1.3 Gap-filling using SEALER  on a CLR assembly 
 
-If both types of reads are availble; then perform the RAILS-COBBLER step first followed by the SEALER step.
+We provide the script CLR_SEALER.sh to be used with CLR assemblies.
 
-## 1.4 Genome Masking
+In the s script we let SEALER run  using both types of short reads: Hi-C and TellSeq.  
+
+
+## 1.4 Order of gap-filling
+
+If both types of reads are availble  AND you have a HiFi assembly; 
+then perform the RAILS-COBBLER step first followed by the SEALER step.
+
+## 1.5 Genome Masking
 
 Genome masking is the step that identifies areas of the genome that should be masked after identifying them as 
 
@@ -108,11 +120,16 @@ The execution could take several hours up to 2 days.
 
 ## 3.2 Gap-filling  using SEALER and  Hi-C reads
 
-The script is called SEALER.slurm.sh
+The script is called HiFi_SEALER.slurm.sh
 
 The execution could take approx a couple of hours.
 
-## 3.3 Masking
+## 3.3 Gap-filling  using SEALER and  TellSeq+Hi-C reads
+
+The script is called CLR_SEALER.slurm.sh
+
+
+## 3.4 Masking
 
 The script is called RepeatMasker.slurm.sh
 
@@ -180,7 +197,7 @@ run with rmblastn version 2.6.0+
 
 </pre>
 
-## 3.4 QC the assembly
+## 3.5 QC the assembly
 
 We provide a script BUSCO_metrics_slurm.sh that runs assemblathon.pl to calculate assembly contiguity.
 

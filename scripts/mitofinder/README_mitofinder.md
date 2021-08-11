@@ -10,6 +10,8 @@ Published online 2020 Apr 25. doi: 10.1111/1755-0998.13160
 
 # 2. Dependencies
 
+- This step should be performed after the scaffolding steps described in this repo
+
 - singularity
 
 - MitoFinder v 1.4
@@ -20,8 +22,8 @@ Published online 2020 Apr 25. doi: 10.1111/1755-0998.13160
 
 # 3. Setup
 
-MitoFinder needs not only the target genome file, but also the reference mitochondrial genome in GenBank format.
-This step cannot be automated. It is basically a search for the mito genome that is closest to the target genome.
+MitoFinder needs not only the target genome file, but also the reference mitochondrial genome of a close species.
+This file should be in GenBank format. This step cannot be automated. 
 We only provide the NCBI download page for all mitochondrial genomes they have.
 
 # 4. Run the script

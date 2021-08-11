@@ -71,7 +71,8 @@ https://www.biorxiv.org/content/10.1101/261149v2.full
 
 # 2. Dependencies
 
-- This step should be run after purging duplicates
+- This step should be run after the purging duplicates step of a HiFi assembly
+OR after the pilon polishing step of a CLR assembly
 
 - ARCS 1.2.1 https://github.com/bcgsc/arcs
 
