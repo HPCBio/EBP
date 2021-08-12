@@ -20,11 +20,11 @@ These are the steps:
 
 1. generate raw assembly with hifiasm  (see ./scripts/Raw_assembly/ )
 
-2. purge duplicate contigs (see ./scripts/Raw_assembly/scaffolding )
+2. purge duplicate contigs (see ./scripts/scaffolding )
 
-3. scaffolding using TellSeq reads (see ./scripts/Raw_assembly/scaffolding )
+3. scaffolding using TellSeq reads (see ./scripts/scaffolding )
 
-4. scaffolding using Omni-C reads (see ./scripts/Raw_assembly/scaffolding )
+4. scaffolding using Omni-C reads (see ./scripts/scaffolding )
 
 5. gap filling (see ./scripts/gap_filling_and_masking/ )
 
@@ -42,9 +42,33 @@ These are the steps:
 
 # Denovo genome assembly using CLR reads
 
-Picture goes here
+1. generate raw assembly with Redbean  (see ./scripts/Raw_assembly/ )
 
-Text goes here
+2. base-correct assembly with Arrow (see ./scripts/Arrow_polish )
+
+3. purge duplicate contigs (see ./scripts/scaffolding )
+
+4. Pilon polishing (see ./scripts/pilon_polishing )
+
+5. scaffolding using TellSeq reads (see ./scripts/scaffolding )
+
+6. scaffolding using Omni-C reads (see ./scripts/scaffolding )
+
+7. gap filling (see ./scripts/gap_filling_and_masking/ )
+
+8. masking repeats and low complexity regions (see ./scripts/gap_filling_and_masking/ )
+
+9. functional annotation (see ./scripts/Annotation/ )
+
+10. FreeBayes polishing (see ./scripts/FreeBayes_polishing )
+
+11. identify and annotate mitochondrial DNA (see ./scripts/mitofinder/ )
+
+12. assess genome completeness w Merqury (see ./scripts/Merqury_completeness/ )
+
+13. identify contaminants and artifacts in genome (see ./scripts/blobtools_contaminants_detection/ )
+
+
 
 # Denovo genome assembly using short reads only
 
