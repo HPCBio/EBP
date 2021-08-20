@@ -1,7 +1,12 @@
-# EBP
-EDIT ME!
+# Earth Biogenome Project (EBP) Insects
 
-Text goes here
+
+The Illinois Innovation Network and the Discovery Partners Institute funded a pilot project to assemble the genomes of agriculturally relevant insects in Illinois for which little or no genomic data are available. Hiqh-quality DNA was isolated using protocols optimized for small, difficult samples. The pilot project Implemented the novel use of Tell-Seq linked-read libraries for the dual purpose of genome size estimation and linked-read scaffolding. Genomes were assembled using PacBio HiFi reads, Tell-Seq reads, and Dovetail Omni-C reads for chromosome-range scaffolding. 
+
+Eight high-quality genomes were assembled from non-model organisms with contig N50 >1Mb and scaffold N50 >5Mb, including the second-only soon-to-be public genome for the order Neuroptera. Species were confidently identified using the mitochondrial genomes assembled from the HiFi reads. Potential endosymbionts and pathogens were identified as well as novel prey information from predator species. Genomes were annotated using the BRAKER2 pipeline, generating a rich set of novel data to mine
+
+To learn more about the Earth Biogenome Project, please use this link: https://www.earthbiogenome.org/
+
 
 # The Workflow
 
@@ -68,8 +73,3 @@ These are the steps:
 
 13. identify contaminants and artifacts in genome (see ./scripts/blobtools_contaminants_detection/ )
 
-
-
-# Denovo genome assembly using short reads only
-
-Not this repo
