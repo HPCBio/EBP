@@ -34,53 +34,53 @@ To learn more about the Earth Biogenome Project, please use this link: https://w
 These are the steps:
 
 
-1. generate raw assembly with hifiasm  (see ./scripts/Raw_assembly/ )
+1. [Generate raw assembly with hifiasm](/scripts/Raw_assembly/README.md)
 
-2. purge duplicate contigs (see ./scripts/scaffolding )
+2. [Purge duplicate contigs](/scripts/scaffolding/README.md)
 
-3. scaffolding using TellSeq reads (see ./scripts/scaffolding )
+3. [Scaffold using TellSeq reads](/scripts/scaffolding/README.md)
 
-4. scaffolding using Omni-C reads (see ./scripts/scaffolding )
+4. [Scaffold using Omni-C reads](/scripts/scaffolding/README.md)
 
-5. gap filling (see ./scripts/gap_filling_and_masking/ )
+5. [Fill gaps](/scripts/gap_filling_and_masking//README.md)
 
-6. masking repeats and low complexity regions (see ./scripts/gap_filling_and_masking/ )
+6. [Mask repeats and low complexity regions(/scripts/gap_filling_and_masking/README.md)
 
-7. functional annotation (see ./scripts/Annotation/ )
+7. [Predict gene and protein function](/scripts/Annotation/README.md)
 
-8. identify and annotate mitochondrial DNA (see ./scripts/mitofinder/ )
+8. [Identify and annotate mitochondrial DNA](/scripts/mitofinder/README.md)
 
-9. assess genome completeness w Merqury (see ./scripts/Merqury_completeness/ )
+9. [Assess genome completeness w Merqury](/scripts/Merqury_completeness/README.md)
 
-10. identify contaminants and artifacts in genome (see ./scripts/blobtools_contaminants_detection/ )
+10. [Identify contaminants and artifacts in genome](/scripts/blobtools_contaminants_detection/README.md)
 
 
 
 # Denovo genome assembly using CLR reads
 
-1. generate raw assembly with Redbean  (see ./scripts/Raw_assembly/ )
+1. [Generate raw assembly with Redbean](/scripts/Raw_assembly//README.md)
 
-2. base-correct assembly with Arrow (see ./scripts/Arrow_polish )
+2. [Base-correct assembly with Arrow](/scripts/Arrow_polish/README.md)
 
-3. purge duplicate contigs (see ./scripts/scaffolding )
+3. [Purge duplicate contigs](/scripts/scaffolding/README.md)
 
-4. Pilon polishing (see ./scripts/pilon_polishing )
+4. [Pilon polishing](/scripts/pilon_polishing/README.md)
 
-5. scaffolding using TellSeq reads (see ./scripts/scaffolding )
+5. [Scaffold using TellSeq reads](/scripts/scaffolding/README.md)
 
-6. scaffolding using Omni-C reads (see ./scripts/scaffolding )
+6. [Scaffold using Omni-C reads](/scripts/scaffolding/README.md)
 
-7. gap filling (see ./scripts/gap_filling_and_masking/ )
+7. [Fill gaps](/scripts/gap_filling_and_masking//README.md)
 
-8. masking repeats and low complexity regions (see ./scripts/gap_filling_and_masking/ )
+8. [Mask repeats and low complexity regions(/scripts/gap_filling_and_masking/README.md)
 
-9. functional annotation (see ./scripts/Annotation/ )
+9. [Predict gene and protein function](/scripts/Annotation/README.md)
 
-10. FreeBayes polishing (see ./scripts/FreeBayes_polishing )
+10. [FreeBayes polishing](/scripts/FreeBayes_polishing/README.md)
 
-11. identify and annotate mitochondrial DNA (see ./scripts/mitofinder/ )
+11. [Identify and annotate mitochondrial DNA](/scripts/mitofinder/README.md)
 
-12. assess genome completeness w Merqury (see ./scripts/Merqury_completeness/ )
+12. [Assess genome completeness w Merqury](/scripts/Merqury_completeness/README.md)
 
-13. identify contaminants and artifacts in genome (see ./scripts/blobtools_contaminants_detection/ )
+13. [Identify contaminants and artifacts in genome](/scripts/blobtools_contaminants_detection/README.md)
 
