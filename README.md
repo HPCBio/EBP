@@ -44,7 +44,7 @@ These are the steps:
 
 5. [Fill gaps](/scripts/gap_filling_and_masking//README.md)
 
-6. [Mask repeats and low complexity regions(/scripts/gap_filling_and_masking/README.md)
+6. [Mask repeats and low complexity regions](/scripts/gap_filling_and_masking/README.md)
 
 7. [Predict gene and protein function](/scripts/Annotation/README.md)
 
@@ -72,7 +72,7 @@ These are the steps:
 
 7. [Fill gaps](/scripts/gap_filling_and_masking//README.md)
 
-8. [Mask repeats and low complexity regions(/scripts/gap_filling_and_masking/README.md)
+8. [Mask repeats and low complexity regions](/scripts/gap_filling_and_masking/README.md)
 
 9. [Predict gene and protein function](/scripts/Annotation/README.md)
 
