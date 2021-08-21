@@ -1,5 +1,8 @@
 # 1. Background
 
+Merqury provides a suite of efficient methods for assessing the quality, completeness, and phasing of genome assemblies using a reference-free, k-mer-based approach. Merqury extends the spectra-cn functionality of KAT and introduces novel features such as spectra-asm, spectra-hap, and blob plots; assembly QV and completeness measurements, and the first reference-free approach for measuring assembly phase blocks using parental k-mers. The included Meryl k-mer counter also provides fast and flexible methods for k-mer set manipulation. Compared to traditional assembly metrics, such as N50 contig size, Merqury provides a much broader evaluation of assembly quality and we recommend reporting these metrics along with any new genome assembly.
+
+Source:
 
 Rhie, A., Walenz, B.P., Koren, S. et al. 
 Merqury: reference-free quality, completeness, and phasing assessment for genome assemblies. 

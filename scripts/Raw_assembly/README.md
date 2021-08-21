@@ -1,6 +1,14 @@
 # Background
 
-We used PacBio long reads to generate the raw assembly.
+<p>
+<img align="center" src="../../docs/de-novo_assembly.jpg" />
+
+</br></br></br>
+</p>
+
+De novo genome assembly is a method for constructing genomes from a large number of (short- or long-) DNA fragments, with no a priori knowledge of the correct sequence or order of those fragments.  In de novo genome assembly there is no reference template to help guide the reassembly of the reads into the original genome. Instead, the genome assembler  reassembles the pieces of sequenced DNA. The order of the reads can be computationally inferred by detecting overlapping regions within the reads. The more similarity between the end of one read and the beginning of another, the more likely they are to have originated from overlapping sections of the genome.
+
+We used PacBio long reads to generate the raw de-novo assembly.
 
 There are two kinds of PacBio long reads:
 
