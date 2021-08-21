@@ -12,21 +12,21 @@ TellSeq libraries  were used in this project for two different purposes:
 
 ## Read preparation steps
 
-- [Step1: demultiplex raw bcl files to fastq files] (./README_step1_illumina_demux.md)
+- [Step1: demultiplex raw bcl files to fastq files] (README_step1_illumina_demux.md)
 
-- [Step2: Install TellSeq container on cluster] (./README_step2_TellSeq_Installation_on_biotech.md)
+- [Step2: Install TellSeq container on cluster] (README_step2_TellSeq_Installation_on_biotech.md)
 
-- [Step3: Run TellRead to QC-trim reads] (./README_step3_run_Tellread.md)
+- [Step3: Run TellRead to QC-trim reads] (README_step3_run_Tellread.md)
 
 ## Reformatting steps
 
-- [Step4: Reformat TellSeq reads for supernova toolkit] (./README_step4_reformat4supernova.md)
+- [Step4: Reformat TellSeq reads for supernova toolkit] (README_step4_reformat4supernova.md)
 
-- [Step5: Reformat TellSeq reads for ARCS] (./README_step5_reformat4arcs.md)
+- [Step5: Reformat TellSeq reads for ARCS] (README_step5_reformat4arcs.md)
 
 ## Genomescope 
 
-- [Step6: Using TellSeq reads to estimate genome size with GenomeScope ] (./README_step6_run_GenomeScope.md)
+- [Step6: Using TellSeq reads to estimate genome size with GenomeScope ] (README_step6_run_GenomeScope.md)
 
 
 
