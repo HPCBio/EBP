@@ -1,10 +1,21 @@
 # 1. Background
 
-We perform gene prediction with the  GeneMark-EP + AUGUSTUS + BRAKER2 pipeline
+Gene prediction or gene finding refers to the process of identifying the regions of genomic DNA that encode genes. This includes protein-coding genes as well as RNA genes, but may also include prediction of other functional elements such as regulatory regions. Gene finding is one of the first and most important steps in understanding the genome of a species once it has been sequenced. 
+
+<p>
+<img align="left" src="./docs/gene_prediction_explained.jpg" />
+
+</br></br></br>
+</p>
+
+Source: https://en.wikipedia.org/wiki/Gene_prediction
+
+
+We perform gene prediction with the  GeneMark-EP + AUGUSTUS + BRAKER2 pipeline. This pipeline combines extrinsic and ab initio approaches by mapping protein and EST data to the genome to validate ab initio predictions. Augustus results can also incorporate hints in the form of EST alignments or protein profiles to increase the accuracy of the gene prediction. 
 
 See: http://opal.biology.gatech.edu/GeneMark/
 
-Then we add functional annotations using InterProScan and blastp with the UniprotDB/swissprot.
+Then we perform protein function prediction using InterProScan and blastp with the UniprotDB/swissprot.
 
 See: 
 
@@ -95,7 +106,7 @@ prothint/
 
 The script BUSCO_protein.sh generates proteome completeness report calculated with BUSCO.
 
-# 4. Functional annotation
+# 4. Protein Function Prediction
 
 We used InterProScan and blastp with the UniprotDB/swissprot databases
 
@@ -145,8 +156,9 @@ The BUSCO results are inside the  BUSCO_proteins_vs_insecta/ folder
 
 The annotated proteome in fasta and gff format are the files: 
 
-EB15_proteins.putative_function.fasta.gz
-EB15_proteins.putative_function_rename.gff
+- EB15_proteins.putative_function.fasta.gz
+
+- EB15_proteins.putative_function_rename.gff
 
 
 

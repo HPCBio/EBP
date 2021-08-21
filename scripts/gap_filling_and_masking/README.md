@@ -1,6 +1,7 @@
 # 1. Background
 
-Unknown sequences, or gaps, are present in many published genomes across public databases. 
+Unknown sequences, or gaps, are present in many published genomes across public databases.
+ 
 Gap filling is an important finishing step in de novo genome assembly, especially in large genomes. 
 The gap filling problem is nontrivial and while there are many computational tools partially solving the problem, 
 several have shortcomings as to the reliability and correctness of the output, i.e. the gap filled draft genome.
@@ -11,7 +12,7 @@ We performed these types of gap filling:
 
 - Gap-filling  using SEALER when  Hi-C reads are available
 
-- Gap-filling using SEAER on a CLR assembly 
+- Gap-filling using SEALER on a CLR assembly 
 
 We perform one type of genome masking:
 
@@ -67,7 +68,7 @@ In the s script we let SEALER run  using both types of short reads: Hi-C and Tel
 
 ## 1.4 Order of gap-filling
 
-If both types of reads are availble  AND you have a HiFi assembly; 
+If both types of short reads are availble  AND you have a HiFi assembly; 
 then perform the RAILS-COBBLER step first followed by the SEALER step.
 
 ## 1.5 Genome Masking
