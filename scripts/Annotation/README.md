@@ -3,7 +3,7 @@
 Gene prediction or gene finding refers to the process of identifying the regions of genomic DNA that encode genes. This includes protein-coding genes as well as RNA genes, but may also include prediction of other functional elements such as regulatory regions. Gene finding is one of the first and most important steps in understanding the genome of a species once it has been sequenced. 
 
 <p>
-<img align="left" src="./docs/gene_prediction_explained.jpg" />
+<img align="left" src="../../docs/gene_prediction_explained.jpg" />
 
 </br></br></br>
 </p>
