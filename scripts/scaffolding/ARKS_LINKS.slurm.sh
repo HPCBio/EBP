@@ -62,7 +62,7 @@ ln -s $GENOME ./$GENOMENAME
 # arcs requires a special interleaved fastq file from the Tell-Seq reads
 # usage: arcs [Options] --arks -f <contig sequence file> <list of linked read files>
 
-arcs -v -b output_prefix -k 60 --min_size=1000 -t $SLURM_NPROCS --arks -f $GENOMENAME 
+arcs -v -b output_prefix -k 60 --min_size=1000 -t $SLURM_NPROCS --arks -f $GENOMENAME $inputARC
 
 # ----------------
 
