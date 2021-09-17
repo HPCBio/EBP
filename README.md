@@ -62,7 +62,7 @@ These are the steps:
 
 2. [Base-correct assembly with Arrow](/scripts/Arrow_polish/README.md)
 
-3. [Purge duplicate contigs](/scripts/purge_dups/README.md
+3. [Purge duplicate contigs](/scripts/purge_dups/README.md)
 
 4. [Pilon polishing](/scripts/pilon_polishing/README.md)
 
