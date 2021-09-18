@@ -5,19 +5,6 @@ The Illinois Innovation Network and the Discovery Partners Institute funded a pi
 
 Eight high-quality genomes were assembled from non-model organisms with contig N50 >1Mb and scaffold N50 >5Mb, including the second-only soon-to-be public genome for the order Neuroptera. Species were confidently identified using the mitochondrial genomes assembled from the HiFi reads. Potential endosymbionts and pathogens were identified as well as novel prey information from predator species. Genomes were annotated using the BRAKER2 pipeline, generating a rich set of novel data to mine
 
-Our sponsors: 
-
-- Illinois Innovation Network https://iin.uillinois.edu/
-
-- Discovery Partners Institute https://dpi.uillinois.edu/
-
-- Carl R. Woese Institute for Genomic Biology (IGB) https://www.igb.illinois.edu
-
-- Roy J. Carver Biotechnology Center https://biotech.illinois.edu/
-
-
-To learn more about the Earth Biogenome Project, please use this link: https://www.earthbiogenome.org/
-
 
 # The Workflow
 
@@ -87,4 +74,23 @@ These are the steps:
 12. [Assess genome completeness w Merqury](/scripts/Merqury_completeness/README.md)
 
 13. [Identify contaminants and artifacts in genome](/scripts/blobtools_contaminants_detection/README.md)
+
+
+
+# Our sponsors: 
+
+- Illinois Innovation Network https://iin.uillinois.edu/
+
+- Discovery Partners Institute https://dpi.uillinois.edu/
+
+- Carl R. Woese Institute for Genomic Biology (IGB) https://www.igb.illinois.edu
+
+- Roy J. Carver Biotechnology Center https://biotech.illinois.edu/
+
+
+To learn more about the Earth Biogenome Project, please use this link: https://www.earthbiogenome.org/
+
+
+
+
 
