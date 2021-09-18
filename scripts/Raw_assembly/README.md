@@ -101,7 +101,7 @@ This tool requires some preprocessing steps.
 
 ## 2.1 Estimate genome size
 
-See README_step6_run_GenomeScope.md  for full details
+See [Estimate Genome Size](/scripts/Estimate_Genome_Size/README.md)
 
 Example:
 
