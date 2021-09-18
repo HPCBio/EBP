@@ -4,8 +4,8 @@
 Long-read, single-molecule technologies, such as those produced by Pacific Biosciences8 (PacBio) and Oxford Nanopore9 (ONT), 
 have the potential to sequence DNA molecules with lengths in the tens of thousands or hundreds of thousands of bases, 
 enabling researchers to assemble large and complex repeats. 
-However, both of these technologies have high per-read error rates (on the order of 5–15%), 
-which has resulted in the development of ‘correction’ algorithms. 
+However, both of these technologies have high per-read error rates (on the order of 5â€“15%), 
+which has resulted in the development of â€˜correctionâ€™ algorithms. 
 These algorithms attempt to use consensus base-calls, raw signal data and/or shorter, 
 more accurate reads to correct long-read assemblies. 
 Examples include Quiver and Arrow for PacBio, Nanopolish for ONT, and Pilon.
@@ -15,7 +15,7 @@ Source:
 
 Errors in long-read assemblies can critically affect protein prediction
 Mick Watson & Amanda Warr 
-Nature Biotechnology volume 37, pages 124–126 (2019)
+Nature Biotechnology volume 37, pages 124â€“126 (2019)
 DOI  https://doi.org/10.1038/s41587-018-0004-z
 
 
@@ -65,15 +65,15 @@ Run arrow polishing after the raw assembly is generated with CLR reads.
 
 The arrow polishing tool uses the CLR reads to correct base-errors in the assembly.
 
-The first part aligns the long reads to the raw assembly and generates a sorted.bam file.
+- The first part aligns the long reads to the raw assembly and generates a sorted.bam file.
 The execution of this script could take a few days.
 
-The second part splits the sorted.bam file into chunks; one chunk per contig
+- The second part splits the sorted.bam file into chunks; one chunk per contig
 and then launching the arrow polishing command on each chunk.
 The execution of this script could take a long time as in weeks;
 depending on the available compute resources and how fragmented the raw assembly is.
 
-The third part collects all results, concatenates them and generates the arrow_polished genome.
+- The third part collects all results, concatenates them and generates the arrow_polished genome.
 It also runs assemblathon and BUSCO to calculate completeness and contiguity of the new assembly.
 The execution of this script could take one to two days.
 
