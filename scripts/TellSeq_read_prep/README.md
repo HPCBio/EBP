@@ -24,10 +24,6 @@ TellSeq libraries  were used in this project for two different purposes:
 
 - [Step5: Reformat TellSeq reads for ARCS](README_step5_reformat4arcs.md)
 
-## Genomescope 
-
-- [Step6: Using TellSeq reads to estimate genome size with GenomeScope ](README_step6_run_GenomeScope.md)
-
 
 
 
