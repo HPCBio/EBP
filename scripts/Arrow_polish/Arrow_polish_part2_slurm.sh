@@ -30,6 +30,7 @@ echo ################################ Declare variables and sanity check
 ### CLRdir is the directory where the subread files are 
 ### PREFIX is the prefix of output files
 ### outputdir is the folder where results will be written to
+### ListContigs is a text file; each line is a list of contigs that will go into the same chunk
  
 PREFIX=EB20
 outputdir=/home/groups/earthbiogenome/results/20210224_${PREFIX}_ArrowPolish
@@ -92,9 +93,12 @@ contigOUT=${contig}_arrow_polished.fasta
 echo `date`
 echo ################################ step 2 extract bam for this chunck only
 
+## example: samtools view -b -o   chunk_101.bam  EB20_redbean_g2.7_80X_sorted.bam  ctg3  ctg4  ctg5  ctg6
+
 module load SAMtools/1.12-IGB-gcc-8.2.0
 
 samtools view -b -o $contigBAM $BAM $contig
+
 
 exitcode=$?
 if [ $exitcode -ne 0 ]
