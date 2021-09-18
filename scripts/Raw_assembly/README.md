@@ -221,7 +221,7 @@ $ wtpoa-cns -t $threads \
    -i ${PREFIX}_Redbean_${SIZE}_${DEPTH}.ctg.lay.gz \
    -fo ${PREFIX}_Redbean_${SIZE}_${DEPTH}.ctg.fa
 
-</pre
+</pre>
 
 ## 2.7 Run the script
 
