@@ -112,6 +112,25 @@ as described here: https://github.com/bcgsc/arcs section *Using stLFR linked rea
 
 - Run LINKS to apply the scaffolding information to the genome 
 
+<pre>
+
+$ touch empty.fof
+
+$ arcs -v \
+  -b output_prefix -k 60 --min_size=1000 \
+  -t $treads \
+  --arks -f $GENOMENAME $TellSeq4ARCS
+
+$ python makeTSVfile.py \
+  ${output_prefix}_original.gv \
+  ${output_prefix}.tigpair_checkpoint.tsv \
+  $GENOMENAME
+
+$ LINKS -f $GENOMENAME \
+  -s empty.fof -b $output_prefix \
+  -l 5 -a 0.9 -z 1000
+
+</pre>
 
 ## 3.3 Run the script
 
