@@ -5,7 +5,7 @@ We performed two types of scaffolding: Scaffolding with TellSeq reads using ARCS
 ## 1.1  Scaffolding with TellSeq reads using ARCS-LINKS
 
 <pre>
-Transposase Enzyme Linked Long-read Sequencing (TELL-Seqô) is a simple and scalable NGS library technology 
+Transposase Enzyme Linked Long-read Sequencing (TELL-Seq‚Ñ¢) is a simple and scalable NGS library technology 
 that generates barcode linked-reads for genome scale sequencing applications.
 </pre>
 
@@ -57,7 +57,7 @@ SALSA  https://github.com/marbl/SALSA
 SALSA2 begins with a draft assembly generated from long reads such as Pacific Biosciences [23] or Oxford Nanopore [24]. 
 SALSA2 requires the unitig sequences and, optionally, a GFA-formatted assembly graph [25] representing the ambiguous reconstructions. 
 Hi-C reads are aligned to the unitig sequences, and unitigs are optionally split in regions lacking Hi-C coverage. 
-A hybrid scaffold graph is constructed using both ambiguous edges from the GFA and edges from the Hi-C reads, scoring edges according to a ìbest buddyî scheme. 
+A hybrid scaffold graph is constructed using both ambiguous edges from the GFA and edges from the Hi-C reads, scoring edges according to a ‚Äúbest buddy‚Äù scheme. 
 Scaffolds are iteratively constructed from this graph using a greedy weighted maximum matching. 
 A mis-join detection step is performed after each iteration to check if any of the joins made during this round are incorrect. 
 Incorrect joins are broken and the edges blacklisted during subsequent iterations. 
@@ -102,15 +102,24 @@ OR after the pilon polishing step of a CLR assembly
 - The file of TellSeq reads has to be interleaved and each header has to have the correct tag
 as described here: https://github.com/bcgsc/arcs section *Using stLFR linked reads*
 
+## 3.2 The steps
+
+- Create an empty file empty.fof
+
+- Run arcs read alignment in ARKS mode
+
+- Run makeTSVfile.py to generate checkpoints
+
+- Run LINKS to apply the scaffolding information to the genome 
 
 
-## 3.2 Edit script
+## 3.3 Run the script
+
 
 The script that runs the analysis is called ARKS_LINKS.slurm.sh
 
 Edit the script with the information of your genome and corresponding TellSeq reads.
 
-## 3.3 Run the script
 
 <pre>
 sbatch ARKS_LINKS.slurm.sh
@@ -134,15 +143,39 @@ This analysis is performed in two steps:
 
 ## 4.1 The mapping step using the arima pipeline. 
 
-This pipeline aligns the reads to the genome with bwa and then it marks and removes optical duplicates with picard.
-The script arima_mapping.slurm.sh performs these steps.
-The csript can take several hours up to one day.
+- Generate genome.fai
+
+- bwa-index genome
+ 
+- bwa-align TellSeq reads to assembly > aln.bam
+
+- Sort aln.bam  > sorted_aln.bam
+
+- Mark and remove PRC duplicates with picard tools > dedup.bam
+
+- Generate index > dedup.bam.bai
+
 
 ## 4.2 The scaffolding step using SALSA
 
-This pipeline takes as input the deduplicated bam file produced by arima; then generates a bed file and an index file; and finally, it runs SALSA.
-The script SALSA.slurm.sh performs these steps.
-This script can take approx one hour.
+- Generate bed file from dedup.bam file with BEDTools  > dedup.bed
+
+- Sort bed file by read name -> sorted_dedup.bed
+
+- Run SALSA.
+
+<pre>
+
+$ run_pipeline.py \
+ -a $GENOMENAME \
+ -l ${GENOMENAME}.fai \
+ -b $sorted_dedup.bed \
+ -e DNASE -o scaffolds \
+ -m yes
+
+</pre>
+
+- If you also have the genome in graph format, then you can add it to the SALSA command with the -g option
 
 
 ## 4.3 QC the SALSA-scaffolded assembly
