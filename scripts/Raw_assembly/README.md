@@ -44,6 +44,8 @@ https://github.com/ruanjue/wtdbg2/blob/master/README-ori.md
 
 We used hifiasm to generate raw assemblies with HiFi reads. https://github.com/chhylp123/hifiasm
 
+This tool does not require  read depth or estimated genome size to be specified at the command line
+
 
 ## 1.1 The hifiasm script
 
@@ -57,10 +59,20 @@ The script consists of two steps:
 
 - Step 2 runs gfatools gfa2fa to reformat the output and write it in fasta format.
 
+<pre>
+
+hifiasm -o ${PREFIX}_hifiasm -t $SLURM_NPROCS $HiFi
+
+gfatools gfa2fa ${PREFIX}_hifiasm.p_ctg.gfa > ${PREFIX}_hifiasm.p_ctg.fasta
+
+</pre>
+
 ## 1.2 Run the script
 
 <pre>
+
  sbatch hifiasm_slurm.sh
+
 </pre>
 
 The tool is very fast. It should not take more than 6 hours to run.
@@ -198,10 +210,25 @@ The script consists of two steps:
 
 - Step 2 runs wtpoa-cns to reformat the output and write it in fasta format.
 
+<pre>
+
+$ wtdbg2 -x sq -g $SIZE -X $DEPTH \
+  -t $threads \
+  -i $CLR1  -i $CLR2 \
+  -fo ${PREFIX}_Redbean_${SIZE}_${DEPTH}
+
+$ wtpoa-cns -t $threads \
+   -i ${PREFIX}_Redbean_${SIZE}_${DEPTH}.ctg.lay.gz \
+   -fo ${PREFIX}_Redbean_${SIZE}_${DEPTH}.ctg.fa
+
+</pre
+
 ## 2.7 Run the script
 
 <pre>
+
  sbatch run_redbean_slurm.sh
+ 
 </pre>
 
 This tool takes a very long time to execute.  It could take over a week or more to complete.
